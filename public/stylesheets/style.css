@@ -1,0 +1,160 @@
+/* Import a cute font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #e3f2fd; /* Light Blue Background */
+  color: #333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height */
+  margin: 0;
+  padding: 20px;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Main Container */
+.container {
+  padding: 25px;
+  background: #ffffff;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid #b3e5fc; /* Cute Blue Border */
+  text-align: center;
+}
+
+/* Centering the header and button */
+.container h3 {
+  margin-bottom: 15px;
+}
+
+.container h3 a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #5aa6e6;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.container h3 a:hover {
+  background: #337ab7;
+}
+
+/* Employee Cards Layout (Centered) */
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering the cards */
+  gap: 15px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Individual Employee Card */
+.employee-card {
+  background: #ffffff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid #b3e5fc;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-card:hover {
+  transform: scale(1.05);
+  background: #b3e5fc;
+}
+
+/* Employee Name */
+.employee-card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1976d2;
+}
+
+/* Employee Position */
+.employee-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Form Styling */
+.container input, 
+.container textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 2px solid #90caf9;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #e3f2fd;
+  color: #333;
+  text-align: center;
+}
+
+/* Buttons */
+.container button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+/* Save & Update Buttons */
+.container table tr td button {
+  background: #42a5f5;
+  color: #fff;
+}
+
+.container table tr td button:hover {
+  background: #1e88e5;
+}
+
+/* Delete Button */
+.container form button {
+  background: #e57373;
+  color: #fff;
+}
+
+.container form button:hover {
+  background: #d32f2f;
+}
+
+/* Cute Box Shadow Effect */
+.container, 
+.container .list-table {
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .employee-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .employee-card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees/create">Create Employee</a></h3>
+      <h1>Employee List</h1>
+
+      <% if (employees.length > 0) { %>
+        <div class="employee-list">
+          <% employees.forEach(employee => { %>
+            <a href="/employees/show/<%= employee._id %>" class="employee-card">
+              <h2><%= employee.name %></h2>
+              <p><strong>Position:</strong> <%= employee.position %></p>
+            </a>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>
