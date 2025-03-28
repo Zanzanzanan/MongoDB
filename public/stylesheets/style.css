@@ -4,115 +4,157 @@
 /* Global Styles */
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #e3f2fd;
+  background-color: #e3f2fd; /* Light Blue Background */
   color: #333;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Full height */
   margin: 0;
   padding: 20px;
-  flex-direction: column;
+  flex-direction: column; /* Stack elements vertically */
 }
 
-/* Container */
+/* Main Container */
 .container {
   padding: 25px;
   background: #ffffff;
-  max-width: 500px;
+  max-width: 800px;
   width: 90%;
   border-radius: 15px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  border: 4px solid #b3e5fc;
+  border: 4px solid #b3e5fc; /* Cute Blue Border */
   text-align: center;
 }
 
-/* Profile Picture */
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 3px solid #90caf9;
+/* Centering the header and button */
+.container h3 {
+  margin-bottom: 15px;
 }
 
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
+.container h3 a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #5aa6e6;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-td {
-  padding: 8px;
-  font-size: 16px;
+.container h3 a:hover {
+  background: #337ab7;
 }
 
-/* Form Inputs */
-input, textarea {
-  width: 100%;
+/* Employee Cards Layout (Centered) */
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centering the cards */
+  gap: 15px;
+  margin-top: 20px;
   padding: 10px;
+}
+
+/* Individual Employee Card */
+.employee-card {
+  background: #ffffff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid #b3e5fc;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-card:hover {
+  transform: scale(1.05);
+  background: #b3e5fc;
+}
+
+/* Employee Name */
+.employee-card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1976d2;
+}
+
+/* Employee Position */
+.employee-card p {
   margin: 8px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Form Styling */
+.container input, 
+.container textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
   border: 2px solid #90caf9;
   border-radius: 10px;
   font-size: 14px;
   background: #e3f2fd;
   color: #333;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #1976d2;
-  background: #bbdefb;
+  text-align: center;
 }
 
 /* Buttons */
-button, .edit-btn, .save-btn, .delete-btn {
+.container button {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
   border: none;
-  margin-top: 10px;
-  text-decoration: none;
 }
 
-.save-btn {
+/* Save & Update Buttons */
+.container table tr td button {
   background: #42a5f5;
   color: #fff;
 }
 
-.save-btn:hover {
+.container table tr td button:hover {
   background: #1e88e5;
 }
 
-.edit-btn {
-  background: #ffb74d;
-  color: #fff;
-  padding: 10px 15px;
-}
-
-.edit-btn:hover {
-  background: #f57c00;
-}
-
-.delete-btn {
+/* Delete Button */
+.container form button {
   background: #e57373;
   color: #fff;
-  padding: 10px 15px;
 }
 
-.delete-btn:hover {
+.container form button:hover {
   background: #d32f2f;
 }
 
-/* Responsive */
+/* Cute Box Shadow Effect */
+.container, 
+.container .list-table {
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 600px) {
-  .container {
-    width: 100%;
+  .employee-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .employee-card {
+    width: 90%;
   }
 }

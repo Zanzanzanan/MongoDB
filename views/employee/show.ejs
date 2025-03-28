@@ -6,39 +6,36 @@
   </head>
   <body>
     <div class="container">
-      <h3><a href="/employees">⬅ Back to Employee List</a></h3>
+      <h3><a href="/employees">Employee List</a></h3>
       <h1>Employee Detail</h1>
-
-      <div class="employee-detail">
-        <img src="/images/default-profile.png" alt="Profile Picture" class="profile-pic" />
-        <table>
-          <tbody>
-            <tr>
-              <td><strong>Name:</strong></td>
-              <td><%= employee.name %></td>
-            </tr>
-            <tr>
-              <td><strong>Address:</strong></td>
-              <td><%= employee.address %></td>
-            </tr>
-            <tr>
-              <td><strong>Position:</strong></td>
-              <td><%= employee.position %></td>
-            </tr>
-            <tr>
-              <td><strong>Salary:</strong></td>
-              <td>$<%= employee.salary %>/year</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="action-buttons">
-        <a href="/employees/edit/<%= employee._id%>" class="edit-btn">✏ Edit</a>
-        <form action="/employees/delete/<%= employee._id%>" method="post">
-          <button type="submit" class="delete-btn">🗑 Delete</button>
-        </form>
-      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= employee.name %></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td><%= employee.address %></td>
+          </tr>
+          <tr>
+            <td>Position</td>
+            <td>:</td>
+            <td><%= employee.position %></td>
+          </tr>
+          <tr>
+            <td>Salary</td>
+            <td>:</td>
+            <td>$<%= employee.salary %>/year</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/employees/edit/<%= employee._id%>">EDIT</a></h3>
+      <form action="/employees/delete/<%= employee._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
     </div>
   </body>
 </html>

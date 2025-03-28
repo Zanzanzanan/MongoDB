@@ -6,23 +6,32 @@
   </head>
   <body>
     <div class="container">
-      <h3><a href="/employees">⬅ Back to Employee List</a></h3>
+      <h3><a href="/employees">Employee List</a></h3>
       <h1>Create New Employee</h1>
-
       <form action="/employees/save" method="post">
-        <label>Name:</label>
-        <input type="text" name="name" placeholder="Enter employee name" required />
-
-        <label>Address:</label>
-        <textarea name="address" placeholder="Enter employee address" required></textarea>
-
-        <label>Position:</label>
-        <input type="text" name="position" placeholder="Enter position" required />
-
-        <label>Salary ($ per year):</label>
-        <input type="number" name="salary" placeholder="Enter salary" required />
-
-        <button type="submit" class="save-btn">Save Employee</button>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" required/></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td><textarea name="address" required></textarea></td>
+            </tr>
+            <tr>
+              <td>Position</td>
+              <td><input type="text" name="position"  required/></td>
+            </tr>
+            <tr>
+              <td>Salary</td>
+              <td><input type="number" name="salary" required/></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
       </form>
     </div>
   </body>
