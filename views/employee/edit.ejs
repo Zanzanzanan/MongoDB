@@ -6,42 +6,29 @@
   </head>
   <body>
     <div class="container">
-      <h3><a href="/employees">Employee List</a></h3>
+      <h3><a href="/employees">⬅ Back to Employee List</a></h3>
       <h1>Edit Employee</h1>
 
       <!-- Show error as a popup alert (Only if error is defined) -->
       <% if (typeof error !== "undefined" && error) { %>
-        <script>
-          alert("<%= error %>");
-        </script>
+        <script>alert("<%= error %>");</script>
       <% } %>
 
       <form action="/employees/update/<%= employee._id%>" method="post">
-        <table>
-          <tbody>
-            <tr>
-              <td>Name</td>
-              <td><input type="text" name="name" value="<%= employee.name %>" /></td>
-            </tr>
-            <tr>
-              <td>Address</td>
-              <td><textarea name="address"><%= employee.address %></textarea></td>
-            </tr>
-            <tr>
-              <td>Position</td>
-              <td><input type="text" name="position" value="<%= employee.position %>" /></td>
-            </tr>
-            <tr>
-              <td>Salary</td>
-              <td><input type="number" name="salary" value="<%= employee.salary %>" /></td>
-            </tr>
-            <tr>
-              <td colspan="2"><button type="submit">Update</button></td>
-            </tr>
-          </tbody>
-        </table>
+        <label>Name:</label>
+        <input type="text" name="name" value="<%= employee.name %>" required />
+
+        <label>Address:</label>
+        <textarea name="address" required><%= employee.address %></textarea>
+
+        <label>Position:</label>
+        <input type="text" name="position" value="<%= employee.position %>" required />
+
+        <label>Salary ($ per year):</label>
+        <input type="number" name="salary" value="<%= employee.salary %>" required />
+
+        <button type="submit" class="save-btn">Update Employee</button>
       </form>
     </div>
   </body>
-
 </html>

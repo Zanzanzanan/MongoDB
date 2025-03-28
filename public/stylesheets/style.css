@@ -4,157 +4,115 @@
 /* Global Styles */
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #e3f2fd; /* Light Blue Background */
+  background-color: #e3f2fd;
   color: #333;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Full height */
+  min-height: 100vh;
   margin: 0;
   padding: 20px;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
 }
 
-/* Main Container */
+/* Container */
 .container {
   padding: 25px;
   background: #ffffff;
-  max-width: 800px;
+  max-width: 500px;
   width: 90%;
   border-radius: 15px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-  border: 4px solid #b3e5fc; /* Cute Blue Border */
+  border: 4px solid #b3e5fc;
   text-align: center;
 }
 
-/* Centering the header and button */
-.container h3 {
-  margin-bottom: 15px;
+/* Profile Picture */
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #90caf9;
 }
 
-.container h3 a {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #5aa6e6;
-  border-radius: 30px;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.container h3 a:hover {
-  background: #337ab7;
-}
-
-/* Employee Cards Layout (Centered) */
-.employee-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centering the cards */
-  gap: 15px;
-  margin-top: 20px;
-  padding: 10px;
-}
-
-/* Individual Employee Card */
-.employee-card {
-  background: #ffffff;
-  padding: 20px;
-  width: 250px;
-  border-radius: 15px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-  border: 3px solid #b3e5fc;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.employee-card:hover {
-  transform: scale(1.05);
-  background: #b3e5fc;
-}
-
-/* Employee Name */
-.employee-card h2 {
-  margin: 0;
-  font-size: 20px;
-  color: #1976d2;
-}
-
-/* Employee Position */
-.employee-card p {
-  margin: 8px 0;
-  font-size: 15px;
-  color: #444;
-}
-
-/* Form Styling */
-.container input, 
-.container textarea {
+/* Tables */
+table {
   width: 100%;
-  padding: 8px 12px;
-  margin-top: 5px;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+td {
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Form Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
   border: 2px solid #90caf9;
   border-radius: 10px;
   font-size: 14px;
   background: #e3f2fd;
   color: #333;
-  text-align: center;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+  background: #bbdefb;
 }
 
 /* Buttons */
-.container button {
+button, .edit-btn, .save-btn, .delete-btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
   border: none;
+  margin-top: 10px;
+  text-decoration: none;
 }
 
-/* Save & Update Buttons */
-.container table tr td button {
+.save-btn {
   background: #42a5f5;
   color: #fff;
 }
 
-.container table tr td button:hover {
+.save-btn:hover {
   background: #1e88e5;
 }
 
-/* Delete Button */
-.container form button {
-  background: #e57373;
+.edit-btn {
+  background: #ffb74d;
   color: #fff;
+  padding: 10px 15px;
 }
 
-.container form button:hover {
+.edit-btn:hover {
+  background: #f57c00;
+}
+
+.delete-btn {
+  background: #e57373;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.delete-btn:hover {
   background: #d32f2f;
 }
 
-/* Cute Box Shadow Effect */
-.container, 
-.container .list-table {
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 600px) {
-  .employee-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .employee-card {
-    width: 90%;
+  .container {
+    width: 100%;
   }
 }
