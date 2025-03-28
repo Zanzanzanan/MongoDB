@@ -158,3 +158,130 @@ body {
     width: 90%;
   }
 }
+
+/* Employee Detail Card */
+.employee-detail {
+  background: #ffffff;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid #b3e5fc;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.employee-detail h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.employee-detail .detail-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+.employee-detail .detail-item i {
+  color: #1976d2;
+  margin-right: 8px;
+}
+
+/* Form Styling */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid #b3e5fc;
+}
+
+.form-container input, 
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #90caf9;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #e3f2fd;
+  color: #333;
+  text-align: left;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  margin-top: 10px;
+}
+
+.form-container button.save-btn {
+  background: #42a5f5;
+  color: #fff;
+}
+
+.form-container button.save-btn:hover {
+  background: #1e88e5;
+}
+
+.form-container button.delete-btn {
+  background: #e57373;
+  color: #fff;
+}
+
+.form-container button.delete-btn:hover {
+  background: #d32f2f;
+}
+
+/* Centering the form container */
+.form-container,
+.employee-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Ensure text fields are centered properly */
+.form-container input,
+.form-container textarea,
+.employee-detail {
+  text-align: center;
+}
+
+/* Ensure buttons are centered */
+.form-container button {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+}
+
+/* Fix centering for the employee detail box */
+.employee-detail {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Adjust centering inside tables */
+.container table {
+  width: 100%;
+  text-align: center;
+}
+
+.container table tr td {
+  vertical-align: middle;
+  text-align: center;
+}
+
